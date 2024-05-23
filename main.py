@@ -12,6 +12,7 @@ pixel_matrix = [pixels[i * width:(i + 1) * width] for i in range(height)]
 
 
 def print_die(val):
+    # More "|" verticle lines mean brightness
     if val == 6:
         print("||||||", end="")
     elif val == 5:
