@@ -6,7 +6,7 @@ image = Image.open('swift.webp').convert('L')  # Convert to grayscale
 # Get pixel values
 pixels = list(image.getdata())
 
-# Convert to 2D matrix if needed
+# Convert to 2D matrix 
 width, height = image.size
 pixel_matrix = [pixels[i * width:(i + 1) * width] for i in range(height)]
 
@@ -56,7 +56,7 @@ for row in pixel_matrix:
     
     while c +interval < c_max:
         sub_array = row[c:c+interval]
-        avg_array.append(sum(sub_array) / len(sub_array))
+        avg_array.append(sum(sub_array) / len(sub_array))  # Taking average of multiple pixels
         c += interval
     for val in avg_array:
         print_die(reduce_to_die(val))
